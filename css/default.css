@@ -1,0 +1,579 @@
+/**  	        	      	    	        	          	
+* @package Joomla
+* @subpackage JoomShopping
+* @author Nevigen.com
+* @website https://nevigen.com//
+* @email support@nevigen.com
+* @copyright Copyright © Nevigen.com. All rights reserved.
+* @license Proprietary. Copyrighted Commercial Software
+* @license agreement https://nevigen.com//license-agreement.html
+**/
+
+#jshop_unijax_filter  {
+	margin: 10px 0 20px;
+}
+
+#jshop_unijax_filter .groupbtnleft,
+#jshop_unijax_filter .groupbtnright {
+	padding: 5px 10px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: inline-block;
+	vertical-align: top;
+}
+
+#jshop_unijax_filter .groupbtnleft:hover,
+#jshop_unijax_filter .groupbtnright:hover {
+	cursor: pointer;
+}
+
+#jshop_unijax_filter .groupbtnleft {
+	border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	-moz-border-radius: 5px 0 0 5px;
+	-o-border-radius: 5px 0 0 5px;
+	border-color: #aaa;
+	color: #fff;
+	margin-right: -5px;
+	background: rgb(59,103,158);
+	background: -moz-linear-gradient(top,  rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(94,170,229,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(59,103,158,1)), color-stop(50%,rgba(43,136,217,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(94,170,229,1)));
+	background: -webkit-linear-gradient(top,  rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(94,170,229,1) 100%);
+	background: -o-linear-gradient(top,  rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(94,170,229,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(94,170,229,1) 100%);
+	background: linear-gradient(to bottom,  rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(94,170,229,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#5eaae5',GradientType=0 );
+}
+
+#jshop_unijax_filter .groupbtnleft:hover {
+	background: rgb(109,179,242);
+	background: -moz-linear-gradient(top,  rgba(109,179,242,1) 0%, rgba(84,163,238,1) 50%, rgba(54,144,240,1) 51%, rgba(30,105,222,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,179,242,1)), color-stop(50%,rgba(84,163,238,1)), color-stop(51%,rgba(54,144,240,1)), color-stop(100%,rgba(30,105,222,1)));
+	background: -webkit-linear-gradient(top,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%);
+	background: -o-linear-gradient(top,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%);
+	background: linear-gradient(to bottom,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 50%,rgba(54,144,240,1) 51%,rgba(30,105,222,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 );
+}
+
+#jshop_unijax_filter .groupbtnright {
+	border-left: none;
+	border-radius: 0 5px 5px 0;
+  	-webkit-border-radius: 0 5px 5px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	-o-border-radius: 0 5px 5px 0;
+	color: #555;
+	margin-left: 0;
+	background: rgb(246,248,249);
+	background: -moz-linear-gradient(top,  rgba(246,248,249,1) 0%, rgba(229,235,238,1) 50%, rgba(215,222,227,1) 51%, rgba(245,247,249,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,248,249,1)), color-stop(50%,rgba(229,235,238,1)), color-stop(51%,rgba(215,222,227,1)), color-stop(100%,rgba(245,247,249,1)));
+	background: -webkit-linear-gradient(top,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
+	background: -o-linear-gradient(top,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
+	background: linear-gradient(to bottom,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 );
+}
+
+#jshop_unijax_filter .groupbtnright:hover {
+	background: rgb(255,255,255);
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(243,243,243,1)), color-stop(51%,rgba(237,237,237,1)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+#jshop_unijax_filter .select[multiple],
+#jshop_unijax_filter select[size] {
+    height: auto;
+	border-radius: 0px;
+	padding: 0px;
+}
+
+.uf_options {
+	clear: both;
+	border: 1px solid #CCCCCC;
+	border-top: none;
+	opacity: 1;
+    max-height: 2000px;
+	-webkit-transition: opacity .5s ease-out, max-height .5s ease-out;
+	transition: opacity .5s ease-out, max-height .5s ease-out;
+	margin:0;
+}
+
+.uf_close + .uf_options {
+	display: block;
+	margin:0;
+	opacity: 0; 
+	max-height: 0;
+	overflow: hidden;
+	transition: opacity .3s ease-in, max-height .1s ease-in;
+}
+
+.uf_trigon  {
+	border-top: 6px solid #294772;
+	border-left: 3px ridge transparent;
+	border-right: 3px solid transparent;
+	margin-bottom: 2px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+div.uf_close > span.uf_trigon {
+	border-left: 6px solid #294772;
+	border-bottom: 3px solid transparent;
+	border-top: 3px ridge transparent !important;
+	border-right: none;
+}
+
+.uf_input {
+	clear: both;
+	display: block;
+	padding: 0;
+	background: #fff;
+	line-height: 18px;
+}
+
+.uf_input input[type="checkbox"] {
+	vertical-align: middle;
+	margin: 0 0 0 5px;
+}
+
+.uf_hidecheckbox input[type="checkbox"] {
+	display: none;
+}
+
+.uf_input input[type="checkbox"]:disabled + label {
+	color:#999;
+}
+
+#jshop_unijax_filter select {
+	width: 100%;
+}
+
+#jshop_unijax_filter .chzn-container-single .chzn-single,
+#jshop_unijax_filter .chzn-container-active.chzn-with-drop .chzn-single{
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	border: 0 !important;
+	border-right:1px solid #ccc !important;
+}
+
+#jshop_unijax_filter .chzn-container-single .chzn-search input {
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	min-height:24px;
+}
+
+#jshop_unijax_filter .chzn-drop{
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	margin-left: -1px;
+	width: 101.5%!important;
+}
+
+#jshop_unijax_filter .chzn-container-single .chzn-single{
+	background: #FFF !important;
+}
+
+#jshop_unijax_filter .chzn-container-multi  .chzn-choices,
+#jshop_unijax_filter .chzn-container-multi  .chzn-choices  .search-field  input{
+	cursor: pointer;
+
+}
+
+#jshop_unijax_filter .chzn-container.chzn-container-multi  .chzn-choices {
+	background-image: url('../images/arrow_down.png');
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	border: 0px !important;
+	border-right: 1px solid #ccc!important;
+}
+
+.uf_select_options ul.chzn-choices {
+	border: 0px !important;
+	padding: 3px 0;
+	background: #fff;
+}
+
+#jshop_unijax_filter .chzn-container-multi.chzn-container-active  .chzn-choices {
+   background-image: url('../images/arrow_up.png');
+   background-position: 100% 50%;
+   background-repeat: no-repeat;
+}
+
+#jshop_unijax_filter ul.chzn-results li.result-selected,
+.uf_hide,
+.uf_preview {
+	display: none !important;
+}
+
+.uf_trackbar_inputs {text-align:center; width:100%;}
+
+.uf_trackbar_inputs input:first-child {margin-right:-4px;border-right:0!important;}
+.uf_trackbar_inputs input:last-child {margin-left:-4px;border-left:0!important;}
+
+.uf_trackbar_inputs input,
+.uf_inputreset{
+	display: inline-block;
+	height: 18px;
+	max-width: 38%;
+	padding: 4px 5px;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 18px;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	border: 1px solid #ccc;
+	vertical-align: top;
+}
+
+
+.uf_inputreset {
+	width: 10%;
+	/* cursor: pointer; */
+	/* margin: 7px 0 0; */
+	color: #fff;
+	/* text-shadow: 0 1px 1px rgba(255,255,255,0.75); */
+	/* background-color: #f5f5f5; */
+	/* background-image: -moz-linear-gradient(top,#fff,#e6e6e6); */
+	/* background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6)); */
+	/* background-image: -webkit-linear-gradient(top,#fff,#e6e6e6); */
+	/* background-image: -o-linear-gradient(top,#fff,#e6e6e6); */
+	/* background-image: linear-gradient(to bottom,#fff,#e6e6e6); */
+	/* background-repeat: repeat-x; */
+	/* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe5e5e5', GradientType=0); */
+	/* border-color: #e6e6e6 #e6e6e6 #bfbfbf; */
+	/* border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25); */
+	/* filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); */
+	/* border: 1px solid #bbb; */
+	/* border-bottom-color: #a2a2a2; */
+	/* -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05); */
+	/* -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05); */
+	/* box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05); */
+	background: none;
+}
+
+.uf_input label {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 2px 5px;
+    width: 75%;
+}
+
+.uf_input:hover {
+	background-color: #3875d7;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );  
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
+	background-image: -webkit-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+	background-image: -moz-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+	background-image: -o-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+	background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
+}
+
+.uf_input:hover label {
+	color: #FFF;
+}
+
+.uf_buttons {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.uf_attr_img {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-top;
+}
+
+[class^=uf_label_] {
+	border: 1px solid #C4C4C4;
+	border-bottom: 0px !important;
+	background: rgb(242,245,246);
+	background: -moz-linear-gradient(top,  rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(100%,rgba(200,215,220,1)));
+	background: -webkit-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: -o-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: linear-gradient(to bottom,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 );
+    padding: 3px 5px;
+    margin: 15px 0 0px;
+	color: #294772;
+	font-weight: bold;
+	cursor: default;
+}
+
+.uf_label_selected {
+	background: #207cca;
+	color: #fff;
+}
+.uf_label_selected span.uf_trigon  {
+	border-top: 6px solid #fff;
+}
+.uf_label_selected.uf_close > span.uf_trigon {
+	border-left: 6px solid #fff;
+}
+
+.uf_manufacturer,
+.uf_category,
+.uf_vendor {
+	color: #07527A;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#uf_sales,
+#uf_additional_prices,
+#uf_reviews {
+	font-weight:bold;
+    border: 0;
+    font-size: 12px;
+	margin: 5px 0;
+}
+
+#uf_sale,
+#uf_additional_price,
+#uf_review {
+	display: inline-block;
+}
+
+.uf_options_sale,
+.uf_options_additional_price,
+.uf_options_review {
+	/*border: 1px solid #ccc;*/
+}
+
+#uf_finded_products,
+.uf_select_options {
+    width: 100%;
+}
+
+.uf_overflow {
+	overflow-y:scroll;
+}
+
+.uf_overflow.uf_no_overflow {
+	overflow-y:auto;
+}
+
+#jshop_unijax_filter a,
+#jshop_unijax_filter a:hover,
+#jshop_unijax_filter a:focus {
+	text-decoration:none !important;
+}
+
+.uf_input > .uf_link,
+.uf_input > .uf_tooltip,
+[class^=uf_label_] > .uf_tooltip {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	float: right;
+	margin-right:2px;
+}
+
+.uf_input > .uf_link {
+	background: url("../images/goto.png") no-repeat scroll center center transparent;
+}
+
+.uf_input > .uf_link:hover {
+	background: url("../images/goto_f.png") no-repeat scroll center center transparent;
+}
+
+.uf_input > .uf_tooltip,
+[class^=uf_label_] > .uf_tooltip {
+	background: url("../images/help.png") no-repeat scroll center center transparent;
+}
+
+.uf_input > .uf_tooltip:hover,
+[class^=uf_label_] > .uf_tooltip:hover {
+	background: url("../images/help_f.png") no-repeat scroll center center transparent;
+}
+
+.uf_clear {
+	clear:both;
+	margin-bottom:10px;
+}
+
+#uf_tooltip{
+	position:absolute;
+	border:1px solid #ccc;
+	padding:5px;
+	display:none;
+	color:#fff;
+	background: rgb(242,245,246);
+	background: -moz-linear-gradient(top,  rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(100%,rgba(200,215,220,1)));
+	background: -webkit-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: -o-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: linear-gradient(to bottom,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 );
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 1px 1px 1em #ccc;
+	-webkit-box-shadow: 1 1 1em #ccc;
+	box-shadow: 1px 1px 1em #ccc;
+	color:#334d89;
+	padding: 10px 15px;
+	max-width: 350px;
+}
+
+#uf_count_product {
+	color: #0438BB;
+	font-weight: bold;
+}
+
+#uf_count_product > .uf_count_loader {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-image: url('../images/preload.gif');
+	vertical-align: middle;
+}
+
+#jshop_unijax_filter .nonactive {
+	color: #c0c0c0 !important;
+}
+
+#jshop_unijax_filter .active {
+	color: #111111 !important;
+}
+
+#jshop_unijax_filter .uf_trackbar {
+	width: 100%;
+	padding-top: 10px;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar div,
+#jshop_unijax_filter .uf_trackbar table.trackbar td {
+	margin: 0;
+	padding: 0;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar {
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	height: 17px;
+	margin: 10px 0px;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .l {
+	text-align: right;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .r {
+	position: relative;
+	text-align: left;
+	cursor: default;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .l div,
+#jshop_unijax_filter .uf_trackbar table.trackbar .r div {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    white-space: nowrap;
+    width: 0;
+    z-index: 1;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .l div {
+    text-align: right;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .r div {
+    text-align: left;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .l div span.limit,
+#jshop_unijax_filter .uf_trackbar table.trackbar .r div span.limit {
+    color: #777777;
+    font: 11px tahoma;
+    position: absolute;
+    top: -20px;
+    z-index: 1;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .l div span.limit {
+    left: 0px;
+    text-align: left;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .r div span.limit {
+    right: 0px;
+}
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .l .leftBlock,
+#jshop_unijax_filter .uf_trackbar table.trackbar .r .rightBlock {
+	width: 9px;
+	height: 8px;
+	line-height: 17px;
+	background: none repeat scroll 0 0 #ddd;
+}
+
+
+#jshop_unijax_filter .uf_trackbar table.trackbar .l .leftBegun,
+#jshop_unijax_filter .uf_trackbar table.trackbar .r .rightBegun {
+	cursor: pointer;
+	vertical-align: middle;
+	position: relative;
+	top: -5px;
+	width: 7px;
+	height: 15px;
+	border-radius: 3px;
+  	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	background: rgb(242,245,246);
+	background: -moz-linear-gradient(top,  rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(100%,rgba(200,215,220,1)));
+	background: -webkit-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: -o-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	background: linear-gradient(to bottom,  rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 );
+	border: 1px solid #aaa;
+}
+#jshop_unijax_filter .uf_trackbar .centerBlock {
+	width: 100%;
+	height: 17px;
+	line-height: 17px;
+	vertical-align: middle;
+}
+#jshop_unijax_filter .uf_trackbar table.trackbar .c {
+	background: none repeat scroll 0 0 #207cca;
+	height: 8px;
+	margin-top: -8px;
+}
+#jshop_unijax_filter .uf_disabled .uf_trackbar table.trackbar .c,
+#jshop_unijax_filter .uf_disabled .uf_trackbar table.trackbar .l .leftBegun,
+#jshop_unijax_filter .uf_disabled .uf_trackbar table.trackbar .r .rightBegun {
+	background: none repeat scroll 0 0 #ddd;
+}
+#jshop_unijax_filter .uf_trackbar table.trackbar .l,
+#jshop_unijax_filter .uf_trackbar table.trackbar .r {
+	height: 8px;
+}
+.uf_count {
+	float: right;
+    padding: 0 5px 0 0;
+}
+.uf_buttons{
+	margin:10px 0 !important;
+}
+	

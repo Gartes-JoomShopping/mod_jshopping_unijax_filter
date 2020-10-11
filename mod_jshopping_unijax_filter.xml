@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>  	        	      	    	        	          	
+<extension version="3.0" type="module" client="site" method="upgrade">
+	<name>JoomShopping - Universal Ajax Filter</name>
+	<author>Nevigen.com</author>
+	<creationDate>May, 2017</creationDate>
+	<copyright>Copyright © Nevigen.com. All rights reserved.</copyright>
+	<license>Proprietary. Copyrighted Commercial Software</license>
+	<authorEmail>support@nevigen.com</authorEmail>
+	<authorUrl>https://nevigen.com//</authorUrl>
+    <version>4.3</version>
+	<description>MOD_JSHOPPING_UNIJAXFILTER_MOD_DESCRIPTION</description>
+	<files>
+		<filename module="mod_jshopping_unijax_filter">mod_jshopping_unijax_filter.php</filename>
+		<filename>helper.php</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>params</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jshopping_unijax_filter/params">
+			<fieldset name="basic">  
+				<field
+					name="use_ajax"
+					type="list"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_USE_AJAX"
+					description="MOD_JSHOPPING_UNIJAXFILTER_USE_AJAX_DES">
+					<option	value="0">JNO</option>
+					<option	value="1">JYES</option>
+					<option	value="2">MOD_JSHOPPING_UNIJAXFILTER_USE_AJAX_COMPATIBILITY</option>
+				</field>
+				<field
+					name="show_immediately"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_IMMEDIATELY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_IMMEDIATELY_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="show_count"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_COUNT"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_COUNT_DES">
+					<option
+						value="1">JSHOW</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+				<field
+					name="show_count_pos"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_COUNT_POS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_COUNT_POS_DES">
+					<option
+						value="1">JSHOW</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+				<field
+					name="show_top_buttons"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_TOP_BUTTONS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_TOP_BUTTONS_DES">
+					<option
+						value="1">JSHOW</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+				<field
+					name="show_bottom_buttons"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_BOTTOM_BUTTONS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_BOTTOM_BUTTONS_DES">
+					<option
+						value="1">JSHOW</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+				<field type="spacer" />
+				<field
+					name="once_option"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_ONCE_OPTION"
+					description="MOD_JSHOPPING_UNIJAXFILTER_ONCE_OPTION_DES">
+					<option
+						value="1">JHIDE</option>
+					<option
+						value="0">JSHOW</option>
+				</field>
+				<field
+					name="hide_non_active"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_NONACTIVE"
+					description="MOD_JSHOPPING_UNIJAXFILTER_NONACTIVE_DES">
+					<option
+						value="2">JNO</option>
+					<option
+						value="1">JDISABLED</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+				<field
+					name="options_qnt"
+					type="text"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_QNT"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_QNT_DES"
+					filter="int"
+				/>
+				<field type="spacer" />
+				<field
+					name="reset_filter_options"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_RESET_FILTER_OPTIONS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_RESET_FILTER_OPTIONS_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="reset_limit"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_RESET_LIMIT"
+					description="MOD_JSHOPPING_UNIJAXFILTER_RESET_LIMIT_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field type="spacer" />
+				<field
+					name="load_scripts"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_LOAD_SCRIPTS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_LOAD_SCRIPTS_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="input_delay"
+					type="text"
+					default="1000"
+					label="MOD_JSHOPPING_UNIJAXFILTER_INPUT_DELAY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_INPUT_DELAY_DES"
+					filter="int"
+				/>
+				<field type="spacer" />
+				<field
+					name="post_processing"
+					type="textarea"
+					default=""
+					rows="10"
+					cols="5"
+					label="MOD_JSHOPPING_UNIJAXFILTER_POST_PROCESSING"
+					description="MOD_JSHOPPING_UNIJAXFILTER_POST_PROCESSING_DES"
+				/>
+			</fieldset> 
+			<fieldset name="output" label="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PARAMETERS">  
+				<field
+					name="output_product_list"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_LIST"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_LIST_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="output_main_page"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_MAIN_PAGE"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_MAIN_PAGE_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="output_product_page"
+					type="list"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_PAGE"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_PAGE_DES">
+					<option	value="0">JNO</option>
+					<option	value="1">JALL</option>
+					<option	value="2">MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_PAGE_CATEGORY</option>
+					<option	value="3">MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_PAGE_MANUFACTURER</option>
+					<option	value="4">MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_PAGE_VENDOR</option>
+				</field>
+				<field
+					name="output_product_qty"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_QTY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_PRODUCT_QTY_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field  
+					name="order_table" 
+					type="order" 
+					default=""					
+					label="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_ORDER" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_OUTPUT_ORDER_DES" />
+			</fieldset> 
+			<fieldset name="prices" label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_PRICES">  
+				<field
+					name="show_prices"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_PRICES"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_PRICES_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="attributes_prices"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_ATTRIBUTES_PRICES"
+					description="MOD_JSHOPPING_UNIJAXFILTER_ATTRIBUTES_PRICES_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="show_trackbar"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_TRACKBAR"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_TRACKBAR_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+			</fieldset> 
+			<fieldset name="categorys" label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CATEGORYS">  
+				<field
+					name="show_categorys"
+					type="list"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CATEGORYS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CATEGORYS_DES">
+					<option	value="0">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_0</option>
+					<option	value="1">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_1</option>
+					<option	value="4">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_4</option>
+					<option	value="2">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_2</option>
+					<option	value="3">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_3</option>
+				</field>
+				<field
+					name="qty_categorys"
+					type="text"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY_DES"
+					filter="int"
+				/>
+				<field
+					name="sort_categorys"
+					type="radio"
+					class="radio btn-group"
+					default="name"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_DESC">
+					<option	value="name">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ABC</option>
+					<option	value="ordering">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ORDERING</option>
+				</field>
+				<field
+					name="show_sub_categorys"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_SUBCATEGORYS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_SUBCATEGORYS_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="hide_subcategorys"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_HIDE_SUBCATEGORYS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_HIDE_SUBCATEGORYS_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="show_categorys_link"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CATEGORYS_LINK"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CATEGORYS_LINK_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="show_categorys_desc"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CATEGORYS_DESC"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CATEGORYS_DESC_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="categorys_filter_type"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_FILTER_TYPE"
+					description="MOD_JSHOPPING_UNIJAXFILTER_CATEGORYS_FILTER_TYPE_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>											
+			</fieldset> 
+			<fieldset name="manufacturers" label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_MANUFACTURERS">  
+				<field
+					name="show_manufacturers"
+					type="list"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_MANUFACTURERS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_MANUFACTURERS_DES">
+					<option	value="0">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_0</option>
+					<option	value="1">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_1</option>
+					<option	value="4">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_4</option>
+					<option	value="2">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_2</option>
+					<option	value="3">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_3</option>
+				</field>
+				<field
+					name="qty_manufacturers"
+					type="text"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY_DES"
+					filter="int"
+				/>
+				<field
+					name="sort_manufacturers"
+					type="radio"
+					class="radio btn-group"
+					default="name"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_DESC">
+					<option	value="name">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ABC</option>
+					<option	value="man.ordering">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ORDERING</option>
+				</field>
+				<field
+					name="show_manufacturers_link"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_MANUFACTURERS_LINK"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_MANUFACTURERS_LINK_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="show_manufacturers_desc"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_MANUFACTURERS_DESC"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_MANUFACTURERS__DESC_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="manufacturers_filter_type"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_FILTER_TYPE"
+					description="MOD_JSHOPPING_UNIJAXFILTER_MANUFACTURERS_FILTER_TYPE_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>											
+			</fieldset> 
+			<fieldset name="vendors" label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_VENDORS">  
+				<field
+					name="show_vendors"
+					type="list"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_VENDORS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_VENDORS_DES">
+					<option	value="0">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_0</option>
+					<option	value="1">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_1</option>
+					<option	value="4">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_4</option>
+					<option	value="2">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_2</option>
+					<option	value="3">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_3</option>
+				</field>
+				<field
+					name="qty_vendors"
+					type="text"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY_DES"
+					filter="int"
+				/>
+				<field
+					name="sort_vendors"
+					type="radio"
+					class="radio btn-group"
+					default="v.shop_name"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_DESC">
+					<option	value="v.shop_name">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ABC</option>
+					<option	value="v.id DESC">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ORDERING</option>
+				</field>
+				<field
+					name="show_vendors_link"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_VENDORS_LINK"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_VENDORS_LINK_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="show_vendors_desc"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_VENDORS_DESC"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_VENDORS_DESC_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="vendors_filter_type"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_FILTER_TYPE"
+					description="MOD_JSHOPPING_UNIJAXFILTER_VENDORS_FILTER_TYPE_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>											
+			</fieldset> 
+			<fieldset name="characteristics" label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CHARACTERISTICS">  
+				<field
+					name="sort_characteristics"
+					type="radio"
+					class="radio btn-group"
+					default="ordering"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_DESC">
+					<option	value="name">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ABC</option>
+					<option	value="ordering">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ORDERING</option>
+				</field>
+				<field type="spacer" hr="true" />
+				<field  
+					name="show_characteristics_1" 
+					type="characteristics" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_1" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_1_DES" />
+				<field  
+					name="show_characteristics_4" 
+					type="characteristics" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_4" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_4_DES" />
+				<field
+					name="qty_characteristics"
+					type="text"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY_DES"
+					filter="int"
+				/>
+				<field
+					name="show_characteristics_desc"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CHARACTERISTICS_DESC"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_CHARACTERISTICS_DESC_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>	 
+				<field  
+					name="close_characteristics_id" 
+					type="characteristics" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_CLOSE_EXTRA_FIELDS" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_CLOSE_EXTRA_FIELDS_DES" />
+				<field type="spacer" hr="true" />
+				<field  
+					name="show_characteristics_2" 
+					type="characteristics" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_2" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_2_DES" />
+				<field  
+					name="show_characteristics_3" 
+					type="characteristics" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_3" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_3_DES" />
+				<field type="spacer" hr="true" />
+				<field  
+					name="show_characteristics_5" 
+					type="characteristics" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_5" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_5_DES" />
+				<field
+					name="show_trackbar_characteristics"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_TRACKBAR"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_TRACKBAR_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field type="spacer" hr="true" />
+				<field  
+					name="multicharacteristics_id" 
+					type="multicharacteristics" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_MULTI_EXTRA_FIELDS" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_MULTI_EXTRA_FIELDS_DES" />
+			</fieldset> 
+			<fieldset name="attributes" label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ATTRIBUTES">  
+				<field
+					name="sort_attributes"
+					type="radio"
+					class="radio btn-group"
+					default="ordering"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_DESC">
+					<option	value="name">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ABC</option>
+					<option	value="ordering">MOD_JSHOPPING_UNIJAXFILTER_SORTING_BY_ORDERING</option>
+				</field>
+				<field type="spacer" hr="true" />
+				<field
+					name="show_attributes"
+					type="list"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ATTRIBUTES"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ATTRIBUTES_DES">
+					<option	value="0">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_0</option>
+					<option	value="1">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_1</option>
+					<option	value="4">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_4</option>
+					<option	value="2">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_2</option>
+					<option	value="3">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_3</option>
+				</field>
+				<field
+					name="qty_attributes"
+					type="text"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY_DES"
+					filter="int"
+				/>
+				<field
+					name="show_attributes_desc"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ATTRIBUTES_DESC"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ATTRIBUTES_DESC_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>	 
+				<field
+					name="show_attribute_image"
+					type="radio"
+					class="radio btn-group"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ATTRIBUTE_IMAGE"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ATTRIBUTE_IMAGE_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>	 
+				<field  
+					name="close_attributes_id" 
+					type="attributes" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_CLOSE_ATTRIBUTES" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_CLOSE_ATTRIBUTES_DES" />
+				<field  
+					name="attributes_id" 
+					type="attributes" 
+					default="0"					
+					label="MOD_JSHOPPING_UNIJAXFILTER_ATTRIBUTES" 
+					description="MOD_JSHOPPING_UNIJAXFILTER_ATTRIBUTES_DES" />
+			</fieldset> 
+			<fieldset name="labels" label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_OTHER_OPTIONS">  
+				<field
+					name="show_labels"
+					type="list"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_LABELS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_LABELS_DES">
+					<option	value="0">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_0</option>
+					<option	value="1">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_1</option>
+					<option	value="4">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_4</option>
+					<option	value="2">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_2</option>
+					<option	value="3">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_3</option>
+				</field>
+				<field
+					name="qty_labels"
+					type="text"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY_DES"
+					filter="int"
+				/>
+				<field
+					name="show_delivery_times"
+					type="list"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_DELIVERY_TIMES"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_DELIVERY_TIMES_DES">
+					<option	value="0">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_0</option>
+					<option	value="1">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_1</option>
+					<option	value="4">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_4</option>
+					<option	value="2">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_2</option>
+					<option	value="3">MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_TYPE_3</option>
+				</field>
+				<field
+					name="qty_delivery_times"
+					type="text"
+					default="0"
+					label="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY"
+					description="MOD_JSHOPPING_UNIJAXFILTER_OPTIONS_SHOW_QTY_DES"
+					filter="int"
+				/>
+				<field
+					name="show_photos"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_PHOTOS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_PHOTOS_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>											
+				<field
+					name="show_availabilitys"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_AVAILABILITYS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_AVAILABILITYS_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>											
+				<field
+					name="show_sales"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_SALES"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_SALES_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>											
+				<field
+					name="show_additional_prices"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ADDITIONAL_PRICES"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_ADDITIONAL_PRICES_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>											
+				<field
+					name="show_reviews"
+					type="radio"
+					class="radio btn-group"
+					default="1"
+					label="MOD_JSHOPPING_UNIJAXFILTER_SHOW_REVIEWS"
+					description="MOD_JSHOPPING_UNIJAXFILTER_SHOW_REVIEWS_DES">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+			</fieldset> 
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>	   
+</extension>
